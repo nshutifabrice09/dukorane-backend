@@ -1,2 +1,9 @@
-package com.dukorane.Dukorane_backend.repository;public interface SkillRepository {
+package com.dukorane.Dukorane_backend.repository;
+
+import com.dukorane.Dukorane_backend.model.Skill;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.UUID;
+
+public interface SkillRepository extends JpaRepository <Skill, UUID> {
 }

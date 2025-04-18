@@ -6,7 +6,7 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "portofolios")
-public class Portofolio {
+public class Portfolio {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 
@@ -19,10 +19,10 @@ public class Portofolio {
     private String mediaUrl;
     private String caption;
 
-    public Portofolio() {
+    public Portfolio() {
     }
 
-    public Portofolio(UUID id, WorkerProfile worker, String mediaUrl, String caption) {
+    public Portfolio(UUID id, WorkerProfile worker, String mediaUrl, String caption) {
         this.id = id;
         this.worker = worker;
         this.mediaUrl = mediaUrl;

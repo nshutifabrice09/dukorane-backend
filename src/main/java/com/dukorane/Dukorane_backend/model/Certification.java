@@ -19,4 +19,55 @@ public class Certification {
     private String title;
     private LocalDate issueDate;
     private String fileUrl;
+
+    public Certification() {
+    }
+
+    public Certification(UUID id, TVETInstitution tvet, String title, LocalDate issueDate, String fileUrl) {
+        this.id = id;
+        this.tvet = tvet;
+        this.title = title;
+        this.issueDate = issueDate;
+        this.fileUrl = fileUrl;
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public TVETInstitution getTvet() {
+        return tvet;
+    }
+
+    public void setTvet(TVETInstitution tvet) {
+        this.tvet = tvet;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public LocalDate getIssueDate() {
+        return issueDate;
+    }
+
+    public void setIssueDate(LocalDate issueDate) {
+        this.issueDate = issueDate;
+    }
+
+    public String getFileUrl() {
+        return fileUrl;
+    }
+
+    public void setFileUrl(String fileUrl) {
+        this.fileUrl = fileUrl;
+    }
 }

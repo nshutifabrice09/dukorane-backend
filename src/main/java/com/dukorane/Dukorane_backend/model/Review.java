@@ -26,4 +26,64 @@ public class Review {
     private String review;
 
     private Timestamp createdAt;
+
+    public Review() {
+    }
+
+    public Review(UUID id, WorkerProfile worker, User employer, int rating, String review, Timestamp createdAt) {
+        this.id = id;
+        this.worker = worker;
+        this.employer = employer;
+        this.rating = rating;
+        this.review = review;
+        this.createdAt = createdAt;
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public WorkerProfile getWorker() {
+        return worker;
+    }
+
+    public void setWorker(WorkerProfile worker) {
+        this.worker = worker;
+    }
+
+    public User getEmployer() {
+        return employer;
+    }
+
+    public void setEmployer(User employer) {
+        this.employer = employer;
+    }
+
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+
+    public String getReview() {
+        return review;
+    }
+
+    public void setReview(String review) {
+        this.review = review;
+    }
+
+    public Timestamp getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Timestamp createdAt) {
+        this.createdAt = createdAt;
+    }
 }
