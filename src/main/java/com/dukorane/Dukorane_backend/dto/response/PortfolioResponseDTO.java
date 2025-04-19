@@ -1,4 +1,4 @@
-package com.dukorane.Dukorane_backend.dot.response;
+package com.dukorane.Dukorane_backend.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

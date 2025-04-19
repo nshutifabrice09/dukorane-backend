@@ -1,4 +1,4 @@
-package com.dukorane.Dukorane_backend.dot.request;
+package com.dukorane.Dukorane_backend.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
