@@ -11,5 +11,5 @@ public interface ApplicationService {
     Application getApplicationById(UUID id);
     Application saveApplication (Application application);
     Application updateApplication (UUID id, Application application);
-    void removeById (UUID id);
+    void deleteById (UUID id);
 }

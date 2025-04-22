@@ -10,6 +10,6 @@ public interface TVETInstitutionService {
     TVETInstitution getTVETInstitutionById (UUID id);
     TVETInstitution saveTvetInstitution (TVETInstitution tvetInstitution);
     TVETInstitution updateTvetInstitution (UUID id, TVETInstitution tvetInstitution);
-    void removeById (UUID id);
+    void deleteById (UUID id);
 
 }

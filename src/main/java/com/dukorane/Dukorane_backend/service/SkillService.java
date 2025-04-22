@@ -10,6 +10,6 @@ public interface SkillService {
     Skill getSkillById (UUID id);
     Skill saveSkill (Skill skill);
     Skill updateSkill (UUID id, Skill skill);
-    void removeById (UUID id);
+    void deleteById (UUID id);
 
 }

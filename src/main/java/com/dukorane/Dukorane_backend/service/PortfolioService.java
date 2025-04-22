@@ -10,5 +10,5 @@ public interface PortfolioService {
     Portfolio getPortfolioById (UUID id);
     Portfolio savePortfolio (Portfolio portfolio);
     Portfolio updatePortfolio (UUID id, Portfolio portfolio);
-    void removeById (UUID id);
+    void deleteById(UUID id);
 }

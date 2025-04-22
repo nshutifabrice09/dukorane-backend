@@ -27,7 +27,8 @@ public class WorkerProfileServiceImplementation implements WorkerProfileService{
     }
 
     @Override
-    public void removeById(UUID id) {
+    public void deleteById(UUID id) {
 
     }
+
 }

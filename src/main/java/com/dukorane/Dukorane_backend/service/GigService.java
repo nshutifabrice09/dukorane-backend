@@ -10,5 +10,5 @@ public interface GigService {
     Gig getGigById (UUID id);
     Gig saveGig (Gig gig);
     Gig updateGig (UUID id, Gig gig);
-    void removeById (UUID id);
+    void deleteById (UUID id);
 }

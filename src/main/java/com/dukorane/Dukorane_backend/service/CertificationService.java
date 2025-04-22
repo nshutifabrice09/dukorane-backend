@@ -11,6 +11,6 @@ public interface CertificationService {
     Certification getApplicationById (UUID id);
     Certification saveCertification (Certification certification);
     Certification updateCertificationById (UUID id, Certification certification);
-    void removeById (UUID id);
+    void deleteById (UUID id);
 
 }

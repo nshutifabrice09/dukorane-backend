@@ -10,5 +10,5 @@ public interface WorkerSkillService {
     WorkerSkill getWorkerSkillById (UUID id);
     WorkerSkill saveWorkerSkill (WorkerSkill WorkerSkill);
     WorkerSkill updateWorkerSkill (UUID id, WorkerSkill WorkerSkill);
-    void removeById (UUID id);
+    void deleteById (UUID id);
 }

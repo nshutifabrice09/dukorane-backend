@@ -10,5 +10,5 @@ public interface WorkerProfileService {
     WorkerProfile getWorkerProfileById (UUID id);
     WorkerProfile saveWorkerProfile (WorkerProfile WorkerProfile);
     WorkerProfile updateWorkerProfile (UUID id, WorkerProfile WorkerProfile);
-    void removeById (UUID id);
+    void deleteById (UUID id);
 }

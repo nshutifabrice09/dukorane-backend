@@ -27,7 +27,8 @@ public class ApplicationServiceImplementation implements ApplicationService{
     }
 
     @Override
-    public void removeById(UUID id) {
+    public void deleteById(UUID id) {
 
     }
+
 }
