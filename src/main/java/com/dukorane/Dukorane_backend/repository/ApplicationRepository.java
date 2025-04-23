@@ -11,10 +11,10 @@ import java.util.UUID;
 
 public interface ApplicationRepository extends JpaRepository <Application, UUID> {
 
-    Application findApplicationId (UUID id);
-
-    @Transactional
-    @Modifying
-    @Query("DELETE FROM Application app WHERE app.id = : id")
-    void deleteApplicationById (@Param("id") UUID id);
+//    Application findApplicationId (UUID id);
+//
+//    @Transactional
+//    @Modifying
+//    @Query("DELETE FROM Application app WHERE app.id = :id")
+//    void deleteApplicationById (@Param("id") UUID id);
 }

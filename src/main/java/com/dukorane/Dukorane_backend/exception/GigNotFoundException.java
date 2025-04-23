@@ -4,6 +4,6 @@ import java.util.UUID;
 
 public class GigNotFoundException extends RuntimeException{
     public GigNotFoundException (UUID id){
-        super("Could not find a Gig with id " +id);
+        super("Could not find a Gig with id "+id);
     }
 }
