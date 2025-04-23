@@ -30,19 +30,19 @@ public class ApplicationController {
         return applicationService.getAllApplications();
     }
 
-    @GetMapping("/applications/{applicationId}")
-    public Application findById(@PathVariable("applicationId") UUID id) {
+    @GetMapping("/applications/{id}")
+    public Application findById(@PathVariable("id") UUID id) {
         return applicationService.getApplicationById(id);
     }
-
-    @DeleteMapping("/application/application/{applicationId}")
-    public void removeById(@PathVariable("applicationId") UUID id) {
+    @PutMapping("/update/application/{id}")
+    public Application updateApplication(@PathVariable("id") UUID id, @RequestBody Application application) {
+        return applicationService.updateApplication(id, application);
+    }
+    @DeleteMapping("/delete/applications/{id}")
+    public void removeById(@PathVariable("id") UUID id) {
         applicationService.deleteById(id);
     }
 
-    @PutMapping("/applications/applications/{applicationId}")
-    public Application updateApplication(@PathVariable("applicationId") UUID id, @RequestBody Application application) {
-        return applicationService.updateApplication(id, application);
-    }
+
 
 }

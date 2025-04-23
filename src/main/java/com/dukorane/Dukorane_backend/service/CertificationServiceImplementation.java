@@ -12,7 +12,7 @@ public class CertificationServiceImplementation implements CertificationService{
     }
 
     @Override
-    public Certification getApplicationById(UUID id) {
+    public Certification getCertificationById(UUID id) {
         return null;
     }
 
@@ -22,7 +22,7 @@ public class CertificationServiceImplementation implements CertificationService{
     }
 
     @Override
-    public Certification updateCertificationById(UUID id, Certification certification) {
+    public Certification updateCertification(UUID id, Certification certification) {
         return null;
     }
 
