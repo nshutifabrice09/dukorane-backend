@@ -1,10 +1,11 @@
 package com.dukorane.Dukorane_backend.service;
 
 import com.dukorane.Dukorane_backend.model.Review;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.UUID;
-
+@Service
 public class ReviewServiceImplementation implements ReviewService{
     @Override
     public List<Review> getAllReviews() {

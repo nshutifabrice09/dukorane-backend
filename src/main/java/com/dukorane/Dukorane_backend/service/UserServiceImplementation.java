@@ -1,10 +1,11 @@
 package com.dukorane.Dukorane_backend.service;
 
 import com.dukorane.Dukorane_backend.model.User;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.UUID;
-
+@Service
 public class UserServiceImplementation implements UserService{
     @Override
     public List<User> getAllUsers() {
