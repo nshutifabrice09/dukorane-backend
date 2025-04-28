@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @CrossOrigin("http://localhost:3000")
@@ -26,6 +27,11 @@ public class UserController {
     @GetMapping("/users")
     public List<User> userList(){
         return userService.getAllUsers();
+    }
+
+    @GetMapping("/user/{id}")
+    public User findById(@PathVariable ("id")UUID id){
+        return userService.getUserById(id);
     }
 }
 

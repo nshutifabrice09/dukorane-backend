@@ -22,20 +22,18 @@ public class User {
     @Enumerated(EnumType.STRING)
     private Role role;
     private String location;
-    private String profilePicture;
     private Timestamp createdAt;
 
     public User() {
     }
 
-    public User(UUID id, String fullName, String phoneNumber, String password, Role role, String location, String profilePicture, Timestamp createdAt) {
+    public User(UUID id, String fullName, String phoneNumber, String password, Role role, String location, Timestamp createdAt) {
         this.id = id;
         this.fullName = fullName;
         this.phoneNumber = phoneNumber;
         this.password = password;
         this.role = role;
         this.location = location;
-        this.profilePicture = profilePicture;
         this.createdAt = createdAt;
     }
 
@@ -87,13 +85,6 @@ public class User {
         this.location = location;
     }
 
-    public String getProfilePicture() {
-        return profilePicture;
-    }
-
-    public void setProfilePicture(String profilePicture) {
-        this.profilePicture = profilePicture;
-    }
 
     public Timestamp getCreatedAt() {
         return createdAt;
