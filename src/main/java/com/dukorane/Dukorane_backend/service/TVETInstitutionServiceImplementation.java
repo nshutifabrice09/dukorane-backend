@@ -7,8 +7,10 @@ import java.util.List;
 import java.util.UUID;
 @Service
 public class TVETInstitutionServiceImplementation implements TVETInstitutionService{
+
+
     @Override
-    public List<TVETInstitution> getAllTvetInstitutions() {
+    public List<TVETInstitution> getAllTVETInstitutions() {
         return null;
     }
 
@@ -18,12 +20,12 @@ public class TVETInstitutionServiceImplementation implements TVETInstitutionServ
     }
 
     @Override
-    public TVETInstitution saveTvetInstitution(TVETInstitution tvetInstitution) {
+    public TVETInstitution saveTVETInstitution(TVETInstitution tvetInstitution) {
         return null;
     }
 
     @Override
-    public TVETInstitution updateTvetInstitution(UUID id, TVETInstitution tvetInstitution) {
+    public TVETInstitution updateTVETInstitution(UUID id, TVETInstitution tvetInstitution) {
         return null;
     }
 
@@ -31,5 +33,4 @@ public class TVETInstitutionServiceImplementation implements TVETInstitutionServ
     public void deleteById(UUID id) {
 
     }
-
 }

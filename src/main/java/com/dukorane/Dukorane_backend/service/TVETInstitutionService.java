@@ -6,10 +6,10 @@ import java.util.List;
 import java.util.UUID;
 
 public interface TVETInstitutionService {
-    List<TVETInstitution> getAllTvetInstitutions();
+    List<TVETInstitution> getAllTVETInstitutions();
     TVETInstitution getTVETInstitutionById (UUID id);
-    TVETInstitution saveTvetInstitution (TVETInstitution tvetInstitution);
-    TVETInstitution updateTvetInstitution (UUID id, TVETInstitution tvetInstitution);
+    TVETInstitution saveTVETInstitution (TVETInstitution tvetInstitution);
+    TVETInstitution updateTVETInstitution (UUID id, TVETInstitution tvetInstitution);
     void deleteById (UUID id);
 
 }
