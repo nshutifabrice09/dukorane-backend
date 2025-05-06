@@ -9,7 +9,6 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.dukorane</groupId>
-	<groupId>com.dukorane</groupId>
 	<artifactId>Dukorane-backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Dukorane-backend</name>
@@ -43,7 +42,7 @@
 		<dependency>
 			<groupId>com.mysql</groupId>
 			<artifactId>mysql-connector-j</artifactId>
-			<scope>runtime</scope>
+			<version>8.0.33</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
