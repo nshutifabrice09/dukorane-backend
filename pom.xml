@@ -9,6 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.dukorane</groupId>
+	<groupId>com.dukorane</groupId>
 	<artifactId>Dukorane-backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Dukorane-backend</name>
