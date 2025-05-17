@@ -21,7 +21,7 @@ public class CertificationController {
     }
 
     @PostMapping("/certification")
-    public Certification save(@RequestBody Certification certification){
+    public Certification saveCertification(@RequestBody Certification certification){
         return certificationService.saveCertification(certification);
     }
 

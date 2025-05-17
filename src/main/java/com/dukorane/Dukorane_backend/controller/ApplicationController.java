@@ -21,7 +21,7 @@ public class ApplicationController {
     }
 
     @PostMapping("/application")
-    public Application save(@RequestBody Application application) {
+    public Application saveApplication(@RequestBody Application application) {
         return applicationService.saveApplication(application);
     }
 

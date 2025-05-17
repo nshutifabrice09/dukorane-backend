@@ -21,7 +21,7 @@ public class PortfolioController {
     }
 
     @PostMapping("/portfolio")
-    public Portfolio save (@RequestBody Portfolio portfolio){
+    public Portfolio savePortfolio (@RequestBody Portfolio portfolio){
         return portfolioService.savePortfolio(portfolio);
     }
 

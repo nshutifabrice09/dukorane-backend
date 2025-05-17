@@ -20,7 +20,7 @@ public class GigController {
     }
 
     @PostMapping("/gig")
-    public Gig save(@RequestBody Gig gig){
+    public Gig saveGig(@RequestBody Gig gig){
         return gigService.saveGig(gig);
     }
 
