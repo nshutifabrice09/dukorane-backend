@@ -19,10 +19,7 @@ public class WorkerSkillController {
         this.workerSkillService = workerSkillService;
     }
 
-    @PostMapping("/workerSkill")
-    public WorkerSkill saveWorkerSkill(@RequestBody WorkerSkill workerSkill){
-        return workerSkillService.saveWorkerSkill(workerSkill);
-    }
+    
 
     @GetMapping("/workerSkills")
     public List <WorkerSkill> workerSkillList(){

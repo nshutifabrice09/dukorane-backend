@@ -21,10 +21,7 @@ public class WorkerProfileController {
         this.workerProfileService = workerProfileService;
     }
 
-    @PostMapping("/workerProfile")
-    public WorkerProfile saveWorkerProfile(@RequestBody WorkerProfile workerProfile){
-        return workerProfileService.saveWorkerProfile(workerProfile);
-    }
+
 
     @GetMapping("/workerProfiles")
     public List<WorkerProfile> workerProfilesList(){

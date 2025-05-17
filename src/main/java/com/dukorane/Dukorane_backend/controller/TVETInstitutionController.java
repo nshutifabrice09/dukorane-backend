@@ -20,10 +20,7 @@ public class TVETInstitutionController {
         this.tvetInstitutionService =tvetInstitutionService;
     }
 
-    @PostMapping("/tvetInstitution")
-    public TVETInstitution saveTVETInstitution(@RequestBody TVETInstitution tvetInstitution){
-        return tvetInstitutionService.saveTVETInstitution(tvetInstitution);
-    }
+    
 
     @GetMapping("/tvetInstitutions")
     public List<TVETInstitution> tvetInstitutionList(){

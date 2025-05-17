@@ -9,7 +9,7 @@ public interface ApplicationService {
 
     List<Application> getAllApplications();
     Application getApplicationById(UUID id);
-    Application saveApplication (Application application);
+    Application saveApplication (Application application, Long gigId, Long workerId);
     Application updateApplication (UUID id, Application application);
     void deleteById (UUID id);
 }

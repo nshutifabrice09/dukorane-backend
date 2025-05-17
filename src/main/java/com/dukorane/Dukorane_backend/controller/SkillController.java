@@ -19,10 +19,7 @@ public class SkillController {
         this.skillService=skillService;
     }
 
-    @PostMapping("/skill")
-    public Skill saveSkill(@RequestBody Skill skill){
-        return skillService.saveSkill(skill);
-    }
+
     @GetMapping("/skills")
     public List<Skill> geSkillsList(){
         return skillService.getAllSkills();

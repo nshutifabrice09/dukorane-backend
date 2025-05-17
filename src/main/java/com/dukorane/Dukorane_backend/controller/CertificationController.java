@@ -20,10 +20,7 @@ public class CertificationController {
         this.certificationService = certificationService;
     }
 
-    @PostMapping("/certification")
-    public Certification saveCertification(@RequestBody Certification certification){
-        return certificationService.saveCertification(certification);
-    }
+
 
     @GetMapping("/certifications")
     public List<Certification> certificationList(){

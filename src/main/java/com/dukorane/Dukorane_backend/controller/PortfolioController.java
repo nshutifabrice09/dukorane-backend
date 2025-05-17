@@ -20,10 +20,7 @@ public class PortfolioController {
         this.portfolioService = portfolioService;
     }
 
-    @PostMapping("/portfolio")
-    public Portfolio savePortfolio (@RequestBody Portfolio portfolio){
-        return portfolioService.savePortfolio(portfolio);
-    }
+
 
     @GetMapping("/portfolios")
     public List<Portfolio> portfolioList(){

@@ -20,10 +20,7 @@ public class ApplicationController {
         this.applicationService = applicationService;
     }
 
-    @PostMapping("/application")
-    public Application saveApplication(@RequestBody Application application) {
-        return applicationService.saveApplication(application);
-    }
+
 
     @GetMapping("/applications")
     public List<Application> applicationList() {

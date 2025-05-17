@@ -19,10 +19,7 @@ public class ReviewController {
         this.reviewService = reviewService;
     }
 
-    @PostMapping("/review")
-    public Review saveReview (@RequestBody Review review){
-        return reviewService.saveReview(review);
-    }
+
 
     @GetMapping("/reviews")
     public List<Review> reviewList(){

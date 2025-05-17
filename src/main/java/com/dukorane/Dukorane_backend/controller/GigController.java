@@ -19,10 +19,7 @@ public class GigController {
         this.gigService = gigService;
     }
 
-    @PostMapping("/gig")
-    public Gig saveGig(@RequestBody Gig gig){
-        return gigService.saveGig(gig);
-    }
+
 
     @GetMapping("/gigs")
     public List<Gig> gigList(){

@@ -18,9 +18,10 @@ public class ApplicationServiceImplementation implements ApplicationService{
     }
 
     @Override
-    public Application saveApplication(Application application) {
+    public Application saveApplication(Application application, Long gigId, Long workerId) {
         return null;
     }
+
 
     @Override
     public Application updateApplication(UUID id, Application application) {
