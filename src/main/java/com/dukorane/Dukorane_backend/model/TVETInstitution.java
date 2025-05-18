@@ -1,15 +1,23 @@
 package com.dukorane.Dukorane_backend.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.UUID;
 
+@Data
+@Builder
 @Entity
 @Table(name = "tvet_institutions")
+@NoArgsConstructor
+@AllArgsConstructor
 public class TVETInstitution {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
+    private Long id;
 
     @OneToOne
     @JoinColumn(name = "user_id")
@@ -18,21 +26,11 @@ public class TVETInstitution {
     private String name;
     private String location;
 
-    public TVETInstitution() {
-    }
-
-    public TVETInstitution(UUID id, User user, String name, String location) {
-        this.id = id;
-        this.user = user;
-        this.name = name;
-        this.location = location;
-    }
-
-    public UUID getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

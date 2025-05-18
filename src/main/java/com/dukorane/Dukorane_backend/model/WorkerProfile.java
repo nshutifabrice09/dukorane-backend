@@ -1,17 +1,25 @@
 package com.dukorane.Dukorane_backend.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 import java.util.UUID;
 
+@Data
+@Builder
 @Entity
-@Table(name="workprofiles")
+@Table(name="worker_profiles")
+@NoArgsConstructor
+@AllArgsConstructor
 public class WorkerProfile {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 
-    private UUID id;
+    private Long id;
 
     @OneToOne
     @JoinColumn(name = "user_id")
@@ -29,24 +37,11 @@ public class WorkerProfile {
 
     private double reputationScore;
 
-    public WorkerProfile() {
-    }
-
-    public WorkerProfile(UUID id, User user, int yearsOfExperience, List<String> languageSpoken, List<String> serviceAreas, boolean verifiedByTvet, double reputationScore) {
-        this.id = id;
-        this.user = user;
-        this.yearsOfExperience = yearsOfExperience;
-        this.languageSpoken = languageSpoken;
-        this.serviceAreas = serviceAreas;
-        this.verifiedByTvet = verifiedByTvet;
-        this.reputationScore = reputationScore;
-    }
-
-    public UUID getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

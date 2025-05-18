@@ -2,17 +2,24 @@ package com.dukorane.Dukorane_backend.model;
 
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.sql.Timestamp;
 import java.util.UUID;
-
+@Data
+@Builder
 @Entity
 @Table(name= "users")
+@NoArgsConstructor
+@AllArgsConstructor
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 
-    private UUID id;
+    private Long id;
     private String fullName;
 
     @Column(unique = true)
@@ -24,24 +31,11 @@ public class User {
     private String location;
     private Timestamp createdAt;
 
-    public User() {
-    }
-
-    public User(UUID id, String fullName, String phoneNumber, String password, Role role, String location, Timestamp createdAt) {
-        this.id = id;
-        this.fullName = fullName;
-        this.phoneNumber = phoneNumber;
-        this.password = password;
-        this.role = role;
-        this.location = location;
-        this.createdAt = createdAt;
-    }
-
-    public UUID getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -84,7 +78,6 @@ public class User {
     public void setLocation(String location) {
         this.location = location;
     }
-
 
     public Timestamp getCreatedAt() {
         return createdAt;
