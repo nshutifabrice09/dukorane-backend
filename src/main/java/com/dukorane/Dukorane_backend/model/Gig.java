@@ -1,17 +1,25 @@
 package com.dukorane.Dukorane_backend.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 import java.util.UUID;
 
+@Data
+@Builder
 @Entity
 @Table(name = "gigs")
+@NoArgsConstructor
+@AllArgsConstructor
 public class Gig {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 
-    private UUID id;
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "employer_id")
@@ -32,25 +40,11 @@ public class Gig {
 
     private LocalDate deadline;
 
-    public Gig() {
-    }
-
-    public Gig(UUID id, User employer, String title, String description, Skill skillRequired, String location, GigStatus status, LocalDate deadline) {
-        this.id = id;
-        this.employer = employer;
-        this.title = title;
-        this.description = description;
-        this.skillRequired = skillRequired;
-        this.location = location;
-        this.status = status;
-        this.deadline = deadline;
-    }
-
-    public UUID getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
