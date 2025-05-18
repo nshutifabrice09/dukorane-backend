@@ -19,7 +19,7 @@ public class WorkerSkillController {
         this.workerSkillService = workerSkillService;
     }
 
-    
+
 
     @GetMapping("/workerSkills")
     public List <WorkerSkill> workerSkillList(){
