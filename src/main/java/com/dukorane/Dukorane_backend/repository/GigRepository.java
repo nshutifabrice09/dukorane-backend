@@ -8,4 +8,5 @@ import java.util.UUID;
 
 @Repository
 public interface GigRepository extends JpaRepository <Gig, UUID> {
+    Gig findGigById(Long gigId);
 }

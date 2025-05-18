@@ -8,4 +8,5 @@ import java.util.UUID;
 
 @Repository
 public interface WorkerProfileRepository extends JpaRepository <WorkerProfile, UUID> {
+    WorkerProfile findWorkerById(Long workerId);
 }
