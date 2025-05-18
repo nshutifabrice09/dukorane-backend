@@ -22,12 +22,12 @@ public class PortfolioServiceImplementation implements PortfolioService{
 
     @Override
     public List<Portfolio> getAllPortfolios() {
-        return null;
+        return portfolioRepository.findAll();
     }
 
     @Override
     public Portfolio getPortfolioById(Long id) {
-        return null;
+        return portfolioRepository.findPortolioById(id);
     }
 
     @Override
