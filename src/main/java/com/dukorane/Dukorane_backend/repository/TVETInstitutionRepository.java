@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 import java.util.UUID;
 
 @Repository
-public interface TVETInstitutionRepository extends JpaRepository <TVETInstitution, UUID> {
+public interface TVETInstitutionRepository extends JpaRepository <TVETInstitution, Long> {
 }
