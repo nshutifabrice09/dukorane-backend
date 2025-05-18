@@ -1,16 +1,24 @@
 package com.dukorane.Dukorane_backend.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 import java.util.UUID;
 
+@Data
+@Builder
 @Entity
 @Table(name = "certifications")
+@NoArgsConstructor
+@AllArgsConstructor
 public class Certification {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "tvet_id")
@@ -20,22 +28,11 @@ public class Certification {
     private LocalDate issueDate;
     private String fileUrl;
 
-    public Certification() {
-    }
-
-    public Certification(UUID id, TVETInstitution tvet, String title, LocalDate issueDate, String fileUrl) {
-        this.id = id;
-        this.tvet = tvet;
-        this.title = title;
-        this.issueDate = issueDate;
-        this.fileUrl = fileUrl;
-    }
-
-    public UUID getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

@@ -37,6 +37,8 @@ public class ApplicationServiceImplementation implements ApplicationService{
         return applicationRepository.findApplicationById(id);
     }
 
+
+
     @Override
     public Application saveApplication(Application application, Long gigId, Long workerId) {
         Gig gig = gigRepository.findGigById(gigId);
@@ -49,12 +51,20 @@ public class ApplicationServiceImplementation implements ApplicationService{
 
     @Override
     public Application updateApplication(UUID id, Application application) {
+        Application existApplication = applicationRepository.findApplicationById(id);
+        if(existApplication != null){
+            existApplication.setGig(application.getGig());
+            existApplication.setWorker(application.getWorker());
+            existApplication.setMessage(application.getMessage());
+            existApplication.setStatus(application.getStatus());
+            return applicationRepository.save(application);
+        }
         return null;
     }
 
     @Override
     public void deleteById(UUID id) {
-
+        applicationRepository.deleteById(id);
     }
 
 }

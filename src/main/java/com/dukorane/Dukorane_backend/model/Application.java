@@ -1,16 +1,24 @@
 package com.dukorane.Dukorane_backend.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.sql.Timestamp;
 import java.util.UUID;
 
+@Data
+@Builder
 @Entity
 @Table(name = "applications")
+@NoArgsConstructor
+@AllArgsConstructor
 public class Application {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "gig_id")
@@ -27,23 +35,12 @@ public class Application {
 
     private Timestamp appliedAt;
 
-    public Application() {
-    }
 
-    public Application(UUID id, Gig gig, WorkerProfile worker, String message, ApplicationStatus status, Timestamp appliedAt) {
-        this.id = id;
-        this.gig = gig;
-        this.worker = worker;
-        this.message = message;
-        this.status = status;
-        this.appliedAt = appliedAt;
-    }
-
-    public UUID getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
