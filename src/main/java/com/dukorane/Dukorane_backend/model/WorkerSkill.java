@@ -1,17 +1,25 @@
 package com.dukorane.Dukorane_backend.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.UUID;
 
+@Data
+@Builder
 @Entity
 @Table(name="worker_skills")
-public class WorkerSkill {//Join Table
+@NoArgsConstructor
+@AllArgsConstructor
+public class WorkerSkill {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 
-    private UUID id;
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "worker_id")
@@ -21,20 +29,11 @@ public class WorkerSkill {//Join Table
     @JoinColumn(name = "skill_id")
     private Skill skill;
 
-    public WorkerSkill() {
-    }
-
-    public WorkerSkill(UUID id, WorkerProfile worker, Skill skill) {
-        this.id = id;
-        this.worker = worker;
-        this.skill = skill;
-    }
-
-    public UUID getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
