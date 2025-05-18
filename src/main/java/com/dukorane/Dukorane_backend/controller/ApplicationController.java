@@ -20,6 +20,11 @@ public class ApplicationController {
         this.applicationService = applicationService;
     }
 
+    @PostMapping("/application/{gigId}/{workerId}")
+    public Application save(@RequestBody Application application,
+                            @PathVariable Long gigId, @PathVariable Long workerId){
+        return applicationService.saveApplication(application, gigId, workerId);
+    }
 
 
 
