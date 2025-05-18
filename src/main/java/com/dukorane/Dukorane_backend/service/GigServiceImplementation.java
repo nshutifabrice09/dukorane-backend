@@ -33,7 +33,7 @@ public class GigServiceImplementation implements GigService{
     }
 
     @Override
-    public Gig saveGig(Gig gig, Long userid, Long skillId) {
+    public Gig saveGig(Gig gig, Long employerId, Long skillId) {
         return null;
     }
 

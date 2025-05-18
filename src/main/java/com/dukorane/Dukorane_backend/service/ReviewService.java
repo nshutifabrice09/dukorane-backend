@@ -8,7 +8,7 @@ import java.util.UUID;
 public interface ReviewService {
     List<Review> getAllReviews ();
     Review getReviewById (Long id);
-    Review saveReview (Review review);
+    Review saveReview (Review review, Long workerId, Long employerId);
     Review updateReview (Long id, Review review);
     void deleteById (Long id);
 }
