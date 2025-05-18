@@ -1,16 +1,24 @@
 package com.dukorane.Dukorane_backend.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.UUID;
 
+@Data
+@Builder
 @Entity
-@Table(name = "portofolios")
+@Table(name = "portfolios")
+@NoArgsConstructor
+@AllArgsConstructor
 public class Portfolio {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 
-    private UUID id;
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "worker_id")
@@ -19,21 +27,11 @@ public class Portfolio {
     private String mediaUrl;
     private String caption;
 
-    public Portfolio() {
-    }
-
-    public Portfolio(UUID id, WorkerProfile worker, String mediaUrl, String caption) {
-        this.id = id;
-        this.worker = worker;
-        this.mediaUrl = mediaUrl;
-        this.caption = caption;
-    }
-
-    public UUID getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

@@ -1,12 +1,20 @@
 package com.dukorane.Dukorane_backend.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.sql.Timestamp;
 import java.util.UUID;
 
+@Data
+@Builder
 @Entity
 @Table(name = "reviews")
+@NoArgsConstructor
+@AllArgsConstructor
 public class Review {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -26,18 +34,6 @@ public class Review {
     private String review;
 
     private Timestamp createdAt;
-
-    public Review() {
-    }
-
-    public Review(UUID id, WorkerProfile worker, User employer, int rating, String review, Timestamp createdAt) {
-        this.id = id;
-        this.worker = worker;
-        this.employer = employer;
-        this.rating = rating;
-        this.review = review;
-        this.createdAt = createdAt;
-    }
 
     public UUID getId() {
         return id;
