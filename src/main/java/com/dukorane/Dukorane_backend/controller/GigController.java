@@ -19,25 +19,4 @@ public class GigController {
         this.gigService = gigService;
     }
 
-
-
-    @GetMapping("/gigs")
-    public List<Gig> gigList(){
-        return gigService.getAllGigs();
-    }
-
-    @GetMapping("/gigs/{id}")
-    public Gig findById(@PathVariable ("id") UUID id){
-        return gigService.getGigById(id);
-    }
-
-    @PutMapping("/update/gig/{id}")
-    public Gig updateGig(@PathVariable ("id") UUID id, @RequestBody Gig gig){
-        return gigService.updateGig(id, gig);
-    }
-
-    @DeleteMapping("/delete/gig/{id}")
-    public void deleteById (@PathVariable ("id") UUID id){
-        gigService.deleteById(id);
-    }
 }

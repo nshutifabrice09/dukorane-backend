@@ -20,25 +20,4 @@ public class PortfolioController {
         this.portfolioService = portfolioService;
     }
 
-
-
-    @GetMapping("/portfolios")
-    public List<Portfolio> portfolioList(){
-        return portfolioService.getAllPortfolios();
-    }
-
-    @GetMapping("/portfolio/{id}")
-    public Portfolio findById(@PathVariable ("id")UUID id){
-        return portfolioService.getPortfolioById(id);
-    }
-
-    @PutMapping("/update/portfolio/{id}")
-    public Portfolio updaPortfolio(@PathVariable ("id") UUID id, @RequestBody Portfolio portfolio){
-        return portfolioService.updatePortfolio(id, portfolio);
-    }
-
-    @DeleteMapping("/delete/portfolio/{id}")
-    public void deleteById(@PathVariable ("id")UUID id){
-        portfolioService.deleteById(id);
-    }
 }

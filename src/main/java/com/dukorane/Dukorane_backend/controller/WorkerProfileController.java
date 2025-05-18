@@ -22,26 +22,4 @@ public class WorkerProfileController {
     }
 
 
-
-    @GetMapping("/workerProfiles")
-    public List<WorkerProfile> workerProfilesList(){
-        return workerProfileService.getAllWorkerProfiles();
-    }
-
-    @GetMapping("/workerProfile/{id}")
-    public WorkerProfile findById(@PathVariable ("id")UUID id){
-        return workerProfileService.getWorkerProfileById(id);
-    }
-
-    @PutMapping("/update/workerProfile/{id}")
-    public WorkerProfile updateWorkerProfile(@PathVariable ("id") UUID id, @RequestBody WorkerProfile workerProfile){
-        return workerProfileService.updateWorkerProfile(id, workerProfile);
-    }
-
-    @DeleteMapping("/delete/workerProfile/{id}")
-    public void deleteById(@PathVariable ("id") UUID id){
-        workerProfileService.deleteById(id);
-    }
-
-
 }

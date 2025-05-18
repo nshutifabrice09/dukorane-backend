@@ -20,26 +20,5 @@ public class TVETInstitutionController {
         this.tvetInstitutionService =tvetInstitutionService;
     }
 
-    
-
-    @GetMapping("/tvetInstitutions")
-    public List<TVETInstitution> tvetInstitutionList(){
-        return tvetInstitutionService.getAllTVETInstitutions();
-    }
-
-    @GetMapping("/tvetInstitution/{id}")
-    public TVETInstitution findById(@PathVariable ("id")UUID id){
-        return tvetInstitutionService.getTVETInstitutionById(id);
-    }
-
-    @PutMapping("/update/tvetInstitution/{id}")
-    public TVETInstitution updateTVETInstitution(@PathVariable ("id") UUID id, @RequestBody TVETInstitution tvetInstitution){
-        return tvetInstitutionService.updateTVETInstitution(id, tvetInstitution);
-    }
-
-    @DeleteMapping("/delete/tvetInstitution/{id}")
-    public void deleteById(@PathVariable ("id") UUID id){
-        tvetInstitutionService.deleteById(id);
-    }
 
 }

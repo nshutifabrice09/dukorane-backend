@@ -22,24 +22,5 @@ public class ApplicationController {
 
 
 
-    @GetMapping("/applications")
-    public List<Application> applicationList() {
-        return applicationService.getAllApplications();
-    }
-
-    @GetMapping("/applications/{id}")
-    public Application findById(@PathVariable("id") UUID id) {
-        return applicationService.getApplicationById(id);
-    }
-    @PutMapping("/update/application/{id}")
-    public Application updateApplication(@PathVariable("id") UUID id, @RequestBody Application application) {
-        return applicationService.updateApplication(id, application);
-    }
-    @DeleteMapping("/delete/applications/{id}")
-    public void removeById(@PathVariable("id") UUID id) {
-        applicationService.deleteById(id);
-    }
-
-
 
 }

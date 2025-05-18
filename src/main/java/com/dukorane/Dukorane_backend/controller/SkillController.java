@@ -19,25 +19,4 @@ public class SkillController {
         this.skillService=skillService;
     }
 
-
-    @GetMapping("/skills")
-    public List<Skill> geSkillsList(){
-        return skillService.getAllSkills();
-    }
-
-    @GetMapping("/skill/{id}")
-    public Skill findById(@PathVariable ("id")UUID id){
-        return skillService.getSkillById(id);
-    }
-
-    @PutMapping("/update/skill/{id}")
-    public Skill updateSkill(@PathVariable ("id") UUID id, @RequestBody Skill skill){
-        return skillService.updateSkill(id, skill);
-    }
-
-    @DeleteMapping("/delete/skill/{id}")
-    public void deleteById(@PathVariable ("id") UUID id){
-        skillService.deleteById(id);
-    }
-
 }

@@ -21,25 +21,4 @@ public class CertificationController {
     }
 
 
-
-    @GetMapping("/certifications")
-    public List<Certification> certificationList(){
-        return certificationService.getAllCertifications();
-    }
-
-    @GetMapping("/certification/{id}")
-    public Certification findById(@PathVariable ("id") UUID id){
-        return certificationService.getCertificationById(id);
-    }
-
-    @PutMapping("/update/certification/{id}")
-    public Certification updateCertification(@PathVariable("id") UUID id, @RequestBody Certification certification){
-        return certificationService.updateCertification (id, certification);
-    }
-
-    @DeleteMapping("/delete/certification/{id}")
-    public void deleteById(@PathVariable("id") UUID id){
-        certificationService.deleteById(id);
-    }
-
 }

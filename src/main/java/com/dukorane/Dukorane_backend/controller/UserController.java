@@ -19,29 +19,5 @@ public class UserController {
         this.userService = userService;
     }
 
-    @PostMapping("/user")
-    public User saveUser(@RequestBody User user){
-        return userService.saveUser(user);
-    }
-
-    @GetMapping("/users")
-    public List<User> userList(){
-        return userService.getAllUsers();
-    }
-
-    @GetMapping("/user/{id}")
-    public User findById(@PathVariable ("id")UUID id){
-        return userService.getUserById(id);
-    }
-
-    @PutMapping("/update/user/{id}")
-    public User updateUser(@PathVariable ("id") UUID id, @RequestBody User user){
-        return userService.updateUser(id, user);
-    }
-
-    @DeleteMapping("/delete/user/{id}")
-    public void deleteById(@PathVariable ("id") UUID id){
-        userService.deleteById(id);
-    }
 }
 

@@ -20,24 +20,4 @@ public class ReviewController {
     }
 
 
-
-    @GetMapping("/reviews")
-    public List<Review> reviewList(){
-        return reviewService.getAllReviews();
-    }
-
-    @GetMapping("/review/{id}")
-    public Review findById(@PathVariable ("id")UUID id){
-        return reviewService.getReviewById(id);
-    }
-
-    @PutMapping("/update/review/{id}")
-    public Review updateReview(@PathVariable ("id")UUID id, @RequestBody Review review){
-        return reviewService.updateReview(id, review);
-    }
-
-    @DeleteMapping("/delete/review/{id}")
-    public void deleteById (@PathVariable ("id") UUID id){
-        reviewService.deleteById(id);
-    }
 }
