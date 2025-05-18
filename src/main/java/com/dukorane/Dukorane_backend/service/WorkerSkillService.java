@@ -7,8 +7,8 @@ import java.util.UUID;
 
 public interface WorkerSkillService {
     List<WorkerSkill> getAllWorkerSkills ();
-    WorkerSkill getWorkerSkillById (UUID id);
+    WorkerSkill getWorkerSkillById (Long id);
     WorkerSkill saveWorkerSkill (WorkerSkill WorkerSkill);
-    WorkerSkill updateWorkerSkill (UUID id, WorkerSkill WorkerSkill);
-    void deleteById (UUID id);
+    WorkerSkill updateWorkerSkill (Long id, WorkerSkill WorkerSkill);
+    void deleteById (Long id);
 }

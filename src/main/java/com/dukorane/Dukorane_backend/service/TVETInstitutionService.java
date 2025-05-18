@@ -7,9 +7,9 @@ import java.util.UUID;
 
 public interface TVETInstitutionService {
     List<TVETInstitution> getAllTVETInstitutions();
-    TVETInstitution getTVETInstitutionById (UUID id);
+    TVETInstitution getTVETInstitutionById (Long id);
     TVETInstitution saveTVETInstitution (TVETInstitution tvetInstitution);
-    TVETInstitution updateTVETInstitution (UUID id, TVETInstitution tvetInstitution);
-    void deleteById (UUID id);
+    TVETInstitution updateTVETInstitution (Long id, TVETInstitution tvetInstitution);
+    void deleteById (Long id);
 
 }

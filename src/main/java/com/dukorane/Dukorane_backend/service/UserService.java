@@ -7,8 +7,8 @@ import java.util.UUID;
 
 public interface UserService {
     List<User> getAllUsers ();
-    User getUserById (UUID id);
+    User getUserById (Long id);
     User saveUser (User user);
-    User updateUser (UUID id, User user);
-    void deleteById (UUID id);
+    User updateUser (Long id, User user);
+    void deleteById (Long id);
 }

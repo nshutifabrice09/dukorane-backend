@@ -7,9 +7,9 @@ import java.util.UUID;
 
 public interface SkillService {
     List<Skill> getAllSkills ();
-    Skill getSkillById (UUID id);
+    Skill getSkillById (Long id);
     Skill saveSkill (Skill skill);
-    Skill updateSkill (UUID id, Skill skill);
-    void deleteById (UUID id);
+    Skill updateSkill (Long id, Skill skill);
+    void deleteById (Long id);
 
 }
