@@ -9,4 +9,5 @@ import java.util.UUID;
 @Repository
 public interface CertificationRepository extends JpaRepository <Certification, Long>{
 
+    Certification findCertificationById(Long id);
 }

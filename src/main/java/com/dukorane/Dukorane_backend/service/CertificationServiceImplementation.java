@@ -22,12 +22,12 @@ public class CertificationServiceImplementation implements CertificationService{
 
     @Override
     public List<Certification> getAllCertifications() {
-        return null;
+        return certificationRepository.findAll();
     }
 
     @Override
     public Certification getCertificationById(Long id) {
-        return null;
+        return certificationRepository.findCertificationById(id);
     }
 
     @Override
