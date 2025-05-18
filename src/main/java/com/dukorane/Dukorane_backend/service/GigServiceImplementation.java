@@ -1,12 +1,27 @@
 package com.dukorane.Dukorane_backend.service;
 
 import com.dukorane.Dukorane_backend.model.Gig;
+import com.dukorane.Dukorane_backend.repository.GigRepository;
+import com.dukorane.Dukorane_backend.repository.SkillRepository;
+import com.dukorane.Dukorane_backend.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class GigServiceImplementation implements GigService{
+    private final GigRepository gigRepository;
+    private final UserRepository userRepository;
+    private final SkillRepository skillRepository;
+
+    @Autowired
+    public GigServiceImplementation(GigRepository gigRepository, UserRepository userRepository, SkillRepository skillRepository) {
+        this.gigRepository = gigRepository;
+        this.userRepository = userRepository;
+        this.skillRepository = skillRepository;
+    }
+
     @Override
     public List<Gig> getAllGigs() {
         return null;
@@ -18,7 +33,7 @@ public class GigServiceImplementation implements GigService{
     }
 
     @Override
-    public Gig saveGig(Gig gig) {
+    public Gig saveGig(Gig gig, Long userid, Long skillId) {
         return null;
     }
 

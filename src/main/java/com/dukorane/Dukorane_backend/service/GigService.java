@@ -8,7 +8,7 @@ import java.util.UUID;
 public interface GigService {
     List<Gig> getAllGigs ();
     Gig getGigById (Long id);
-    Gig saveGig (Gig gig);
+    Gig saveGig (Gig gig, Long userId, Long skillId);
     Gig updateGig (Long id, Gig gig);
     void deleteById (Long id);
 }
