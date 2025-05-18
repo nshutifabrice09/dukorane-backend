@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 import java.util.UUID;
 
 @Repository
-public interface GigRepository extends JpaRepository <Gig, UUID> {
+public interface GigRepository extends JpaRepository <Gig, Long> {
     Gig findGigById(Long gigId);
 }
