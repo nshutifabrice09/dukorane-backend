@@ -24,12 +24,12 @@ public class GigServiceImplementation implements GigService{
 
     @Override
     public List<Gig> getAllGigs() {
-        return null;
+        return gigRepository.findAll();
     }
 
     @Override
     public Gig getGigById(Long id) {
-        return null;
+        return gigRepository.findGigById(id);
     }
 
     @Override
