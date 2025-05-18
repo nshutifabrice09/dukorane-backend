@@ -14,12 +14,6 @@ import java.util.UUID;
 @CrossOrigin("http://localhost:3000")
 public class WorkerProfileController {
 
-    private final WorkerProfileService workerProfileService;
-
-    @Autowired
-    public WorkerProfileController(WorkerProfileService workerProfileService){
-        this.workerProfileService = workerProfileService;
-    }
 
 
 }

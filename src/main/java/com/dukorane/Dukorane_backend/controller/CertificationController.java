@@ -12,13 +12,5 @@ import java.util.UUID;
 @RestController
 @CrossOrigin("http://localhost:3000")
 public class CertificationController {
-
-    private final CertificationService certificationService;
-
-    @Autowired
-    public CertificationController(CertificationService certificationService){
-        this.certificationService = certificationService;
-    }
-
-
+    
 }

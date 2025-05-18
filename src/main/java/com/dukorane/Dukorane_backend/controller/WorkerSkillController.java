@@ -12,10 +12,4 @@ import java.util.UUID;
 @CrossOrigin("http://localhost:3000")
 public class WorkerSkillController {
 
-    private WorkerSkillService workerSkillService;
-
-    @Autowired
-    public WorkerSkillController (WorkerSkillService workerSkillService){
-        this.workerSkillService = workerSkillService;
-    }
 }

@@ -13,12 +13,4 @@ import java.util.UUID;
 @CrossOrigin("http://localhost:3000")
 public class TVETInstitutionController {
 
-    private final TVETInstitutionService tvetInstitutionService;
-
-    @Autowired
-    public TVETInstitutionController (TVETInstitutionService tvetInstitutionService){
-        this.tvetInstitutionService =tvetInstitutionService;
-    }
-
-
 }

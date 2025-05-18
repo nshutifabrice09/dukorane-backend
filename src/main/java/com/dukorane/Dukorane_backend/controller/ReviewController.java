@@ -12,12 +12,5 @@ import java.util.UUID;
 @CrossOrigin("http://localhost:3000")
 public class ReviewController {
 
-    private final ReviewService reviewService;
-
-    @Autowired
-    public ReviewController (ReviewService reviewService){
-        this.reviewService = reviewService;
-    }
-
 
 }

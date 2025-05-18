@@ -13,11 +13,4 @@ import java.util.UUID;
 @CrossOrigin("http://localhost:3000")
 public class PortfolioController {
 
-    private final PortfolioService portfolioService;
-
-    @Autowired
-    public PortfolioController(PortfolioService portfolioService){
-        this.portfolioService = portfolioService;
-    }
-
 }

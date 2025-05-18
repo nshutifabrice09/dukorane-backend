@@ -12,11 +12,4 @@ import java.util.UUID;
 @CrossOrigin("http://localhost:3000")
 public class GigController {
 
-    private final GigService gigService;
-
-    @Autowired
-    public GigController(GigService gigService){
-        this.gigService = gigService;
-    }
-
 }
