@@ -18,7 +18,7 @@ import java.util.UUID;
 public class Review {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "worker_id")
@@ -35,11 +35,11 @@ public class Review {
 
     private Timestamp createdAt;
 
-    public UUID getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

@@ -1,34 +1,33 @@
 package com.dukorane.Dukorane_backend.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.UUID;
 
+@Data
+@Builder
 @Entity
 @Table(name="skills")
+@NoArgsConstructor
+@AllArgsConstructor
 public class Skill {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 
-    private UUID id;
+    private Long id;
 
     private String name;
     private String category;
 
-    public Skill() {
-    }
-
-    public Skill(UUID id, String name, String category) {
-        this.id = id;
-        this.name = name;
-        this.category = category;
-    }
-
-    public UUID getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
