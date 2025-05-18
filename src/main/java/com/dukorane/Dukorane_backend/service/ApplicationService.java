@@ -8,8 +8,8 @@ import java.util.UUID;
 public interface ApplicationService {
 
     List<Application> getAllApplications();
-    Application getApplicationById(UUID id);
+    Application getApplicationById(Long id);
     Application saveApplication (Application application, Long gigId, Long workerId);
-    Application updateApplication (UUID id, Application application);
-    void deleteById (UUID id);
+    Application updateApplication (Long id, Application application);
+    void deleteById (Long id);
 }

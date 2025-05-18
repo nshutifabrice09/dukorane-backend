@@ -11,13 +11,7 @@ import org.springframework.stereotype.Repository;
 import java.util.UUID;
 
 @Repository
-public interface ApplicationRepository extends JpaRepository <Application, UUID> {
-    Application findApplicationById(UUID id);
+public interface ApplicationRepository extends JpaRepository <Application, Long> {
+    Application findApplicationById(Long id);
 
-//    Application findApplicationId (UUID id);
-//
-//    @Transactional
-//    @Modifying
-//    @Query("DELETE FROM Application app WHERE app.id = :id")
-//    void deleteApplicationById (@Param("id") UUID id);
 }

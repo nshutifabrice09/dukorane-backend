@@ -33,7 +33,7 @@ public class ApplicationServiceImplementation implements ApplicationService{
     }
 
     @Override
-    public Application getApplicationById(UUID id) {
+    public Application getApplicationById(Long id) {
         return applicationRepository.findApplicationById(id);
     }
 
@@ -50,7 +50,7 @@ public class ApplicationServiceImplementation implements ApplicationService{
 
 
     @Override
-    public Application updateApplication(UUID id, Application application) {
+    public Application updateApplication(Long id, Application application) {
         Application existApplication = applicationRepository.findApplicationById(id);
         if(existApplication != null){
             existApplication.setGig(application.getGig());
@@ -63,7 +63,7 @@ public class ApplicationServiceImplementation implements ApplicationService{
     }
 
     @Override
-    public void deleteById(UUID id) {
+    public void deleteById(Long id) {
         applicationRepository.deleteById(id);
     }
 

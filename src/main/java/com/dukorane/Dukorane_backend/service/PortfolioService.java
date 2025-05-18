@@ -7,8 +7,8 @@ import java.util.UUID;
 
 public interface PortfolioService {
     List<Portfolio> getAllPortfolios ();
-    Portfolio getPortfolioById (UUID id);
+    Portfolio getPortfolioById (Long id);
     Portfolio savePortfolio (Portfolio portfolio);
-    Portfolio updatePortfolio (UUID id, Portfolio portfolio);
-    void deleteById(UUID id);
+    Portfolio updatePortfolio (Long id, Portfolio portfolio);
+    void deleteById(Long id);
 }

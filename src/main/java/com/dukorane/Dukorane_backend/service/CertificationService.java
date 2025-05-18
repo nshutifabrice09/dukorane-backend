@@ -8,9 +8,9 @@ import java.util.UUID;
 public interface CertificationService {
 
     List<Certification> getAllCertifications();
-    Certification getCertificationById (UUID id);
+    Certification getCertificationById (Long id);
     Certification saveCertification (Certification certification);
-    Certification updateCertification (UUID id, Certification certification);
-    void deleteById (UUID id);
+    Certification updateCertification (Long id, Certification certification);
+    void deleteById (Long id);
 
 }
