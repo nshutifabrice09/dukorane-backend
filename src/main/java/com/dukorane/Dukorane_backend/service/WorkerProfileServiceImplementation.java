@@ -1,2 +1,7 @@
-package com.dukorane.Dukorane_backend.service;public class WorkerProfileServiceImplementation {
+package com.dukorane.Dukorane_backend.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class WorkerProfileServiceImplementation implements WorkerProfileService {
 }
