@@ -35,4 +35,14 @@ public class ApplicationController {
     public Application getApplication(@PathVariable ("id") Long id){
         return applicationService.getApplicationById(id);
     }
+
+    @PutMapping("/update/application/{id}")
+    public Application updateApplication(@PathVariable ("id") Long id, @RequestBody Application application){
+        return applicationService.updateApplication(id, application);
+    }
+
+    @DeleteMapping("/delete/application/{id}")
+    public void deleteApplication(@PathVariable ("id") Long id){
+        applicationService.deleteById(id);
+    }
 }
