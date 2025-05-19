@@ -8,6 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.sql.Timestamp;
+import java.time.LocalDate;
 import java.util.UUID;
 @Data
 @Builder
@@ -29,7 +30,7 @@ public class User {
     @Enumerated(EnumType.STRING)
     private Role role;
     private String location;
-    private Timestamp createdAt;
+    private LocalDate createdAt;
 
     public Long getId() {
         return id;
@@ -79,11 +80,11 @@ public class User {
         this.location = location;
     }
 
-    public Timestamp getCreatedAt() {
+    public LocalDate getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(Timestamp createdAt) {
+    public void setCreatedAt(LocalDate createdAt) {
         this.createdAt = createdAt;
     }
 }

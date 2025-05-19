@@ -41,6 +41,7 @@ public class UserServiceImplementation implements UserService{
             existUser.setPassword(user.getPassword());
             existUser.setRole(user.getRole());
             existUser.setLocation(user.getLocation());
+            existUser.setCreatedAt(user.getCreatedAt());
             return userRepository.save(user);
         }
 

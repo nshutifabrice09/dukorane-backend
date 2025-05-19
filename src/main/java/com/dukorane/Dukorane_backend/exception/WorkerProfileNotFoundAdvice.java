@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @ControllerAdvice
-public class WorkerProfileNtoFoundAdvice {
+public class WorkerProfileNotFoundAdvice {
 
     @ResponseBody
     @ExceptionHandler(WorkerProfileNotFoundException.class)

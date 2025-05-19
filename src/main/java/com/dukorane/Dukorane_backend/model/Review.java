@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.sql.Timestamp;
+import java.time.LocalDate;
 import java.util.UUID;
 
 @Data
@@ -33,7 +34,7 @@ public class Review {
     @Column(length = 1024)
     private String review;
 
-    private Timestamp createdAt;
+    private LocalDate createdAt;
 
     public Long getId() {
         return id;
@@ -75,11 +76,11 @@ public class Review {
         this.review = review;
     }
 
-    public Timestamp getCreatedAt() {
+    public LocalDate getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(Timestamp createdAt) {
+    public void setCreatedAt(LocalDate createdAt) {
         this.createdAt = createdAt;
     }
 }

@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.sql.Timestamp;
+import java.time.LocalDate;
 import java.util.UUID;
 
 @Data
@@ -33,7 +34,7 @@ public class Application {
     @Enumerated(EnumType.STRING)
     private ApplicationStatus status;
 
-    private Timestamp appliedAt;
+    private LocalDate appliedAt;
 
 
     public Long getId() {
@@ -76,11 +77,11 @@ public class Application {
         this.status = status;
     }
 
-    public Timestamp getAppliedAt() {
+    public LocalDate getAppliedAt() {
         return appliedAt;
     }
 
-    public void setAppliedAt(Timestamp appliedAt) {
+    public void setAppliedAt(LocalDate appliedAt) {
         this.appliedAt = appliedAt;
     }
 }

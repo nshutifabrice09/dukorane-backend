@@ -4,7 +4,7 @@ import java.util.UUID;
 
 public class ReviewNotFoundException extends RuntimeException{
 
-    public ReviewNotFoundException(UUID id){
+    public ReviewNotFoundException(Long id){
         super ("Couldn't find a Review with id "+id);
     }
 }
