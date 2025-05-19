@@ -32,4 +32,13 @@ public class SkillController {
     public Skill getSkill(@PathVariable ("id") Long id){
         return skillService.getSkillById(id);
     }
+
+    @PutMapping("/update/skill/{id}")
+    public Skill updateSkill(@PathVariable ("id") Long id, @RequestBody Skill skill){
+        return skillService.updateSkill(id, skill);
+    }
+    @DeleteMapping("/delete/skill/{id}")
+    public void deleteSkill(@PathVariable ("id") Long id){
+        skillService.deleteById(id);
+    }
 }
