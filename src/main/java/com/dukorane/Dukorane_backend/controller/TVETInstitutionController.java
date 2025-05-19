@@ -30,4 +30,20 @@ public class TVETInstitutionController {
         return tvetInstitutionService.getAllTVETInstitutions();
     }
 
+    @GetMapping("/tvetInstitution/{id}")
+    public TVETInstitution getTvetInstitution(@PathVariable ("id") Long id){
+        return tvetInstitutionService.getTVETInstitutionById(id);
+    }
+
+    @PutMapping("/update/tvetInstitution/{id}")
+    public TVETInstitution updateInstitution(@PathVariable ("id") Long id,@RequestBody TVETInstitution tvetInstitution){
+        return tvetInstitutionService.updateTVETInstitution(id, tvetInstitution);
+    }
+
+    @DeleteMapping("/delete/tvetInstitution/{id}")
+    public void delete(@PathVariable ("id") Long id){
+        tvetInstitutionService.deleteById(id);
+    }
+
+
 }
