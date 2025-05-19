@@ -8,4 +8,5 @@ import java.util.UUID;
 
 @Repository
 public interface TVETInstitutionRepository extends JpaRepository <TVETInstitution, Long> {
+    TVETInstitution findTvetInstitutionById(Long id);
 }
