@@ -1,6 +1,7 @@
 package com.dukorane.Dukorane_backend.service;
 
 import com.dukorane.Dukorane_backend.model.Certification;
+import com.dukorane.Dukorane_backend.model.TVETInstitution;
 import com.dukorane.Dukorane_backend.repository.CertificationRepository;
 import com.dukorane.Dukorane_backend.repository.TVETInstitutionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +33,9 @@ public class CertificationServiceImplementation implements CertificationService{
 
     @Override
     public Certification saveCertification(Certification certification, Long tvetId) {
-        return null;
+        TVETInstitution tvetInstitution = tvetInstitutionRepository.findTvetInstitutionById(tvetId);
+        certification.setTvet(tvetInstitution);
+        return certificationRepository.save(certification);
     }
 
     @Override
@@ -42,6 +45,6 @@ public class CertificationServiceImplementation implements CertificationService{
 
     @Override
     public void deleteById(Long id) {
-
+        tvetInstitutionRepository.deleteById(id);
     }
 }
