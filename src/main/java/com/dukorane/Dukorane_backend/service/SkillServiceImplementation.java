@@ -44,6 +44,6 @@ public class SkillServiceImplementation implements SkillService{
 
     @Override
     public void deleteById(Long id) {
-
+        skillRepository.deleteById(id);
     }
 }

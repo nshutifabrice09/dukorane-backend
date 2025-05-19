@@ -6,11 +6,30 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.UUID;
 
 @RestController
 @CrossOrigin("http://localhost:3000")
 public class SkillController {
 
+    private final SkillService skillService;
 
+
+    @Autowired
+    public SkillController(SkillService skillService) {
+        this.skillService = skillService;
+    }
+
+    @PostMapping("/skill")
+    public Skill save(@RequestBody Skill skill){
+        return skillService.saveSkill(skill);
+    }
+
+    @GetMapping("/skills")
+    public List<Skill> skillList(){
+        return skillService.getAllSkills();
+    }
+    @GetMapping("/skill/{id}")
+    public Skill getSkill(@PathVariable ("id") Long id){
+        return skillService.getSkillById(id);
+    }
 }
