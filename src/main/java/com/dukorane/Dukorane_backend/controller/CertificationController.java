@@ -1,6 +1,7 @@
 package com.dukorane.Dukorane_backend.controller;
 
 
+import com.dukorane.Dukorane_backend.model.Certification;
 import com.dukorane.Dukorane_backend.service.CertificationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -14,5 +15,10 @@ public class CertificationController {
     @Autowired
     public CertificationController(CertificationService certificationService) {
         this.certificationService = certificationService;
+    }
+
+    @PostMapping("/certification/{tvetId}")
+    public Certification save(@RequestBody Certification certification, @PathVariable ("tvetId") Long tvetId){
+        return certificationService.saveCertification(certification, tvetId);
     }
 }
