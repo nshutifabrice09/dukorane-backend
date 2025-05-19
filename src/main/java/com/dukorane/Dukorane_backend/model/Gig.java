@@ -22,7 +22,7 @@ public class Gig {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "employer_id")
+    @JoinColumn(name = "user_id")
     private User employer;
     private String title;
 
@@ -30,7 +30,7 @@ public class Gig {
     private String description;
 
     @ManyToOne
-    @JoinColumn(name = "skill_required")
+    @JoinColumn(name = "skill_Id")
     private Skill skillRequired;
 
     private String location;

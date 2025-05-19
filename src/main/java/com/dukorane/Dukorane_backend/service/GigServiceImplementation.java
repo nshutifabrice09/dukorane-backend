@@ -1,6 +1,8 @@
 package com.dukorane.Dukorane_backend.service;
 
 import com.dukorane.Dukorane_backend.model.Gig;
+import com.dukorane.Dukorane_backend.model.Skill;
+import com.dukorane.Dukorane_backend.model.User;
 import com.dukorane.Dukorane_backend.repository.GigRepository;
 import com.dukorane.Dukorane_backend.repository.SkillRepository;
 import com.dukorane.Dukorane_backend.repository.UserRepository;
@@ -33,8 +35,12 @@ public class GigServiceImplementation implements GigService{
     }
 
     @Override
-    public Gig saveGig(Gig gig, Long employerId, Long skillId) {
-        return null;
+    public Gig saveGig(Gig gig, Long userId, Long skillId) {
+        User user = userRepository.findUserById(userId);
+        Skill skill = skillRepository.findSkillById(skillId);
+        gig.setEmployer(user);
+        gig.setSkillRequired(skill);
+        return gigRepository.save(gig);
     }
 
     @Override
@@ -44,6 +50,6 @@ public class GigServiceImplementation implements GigService{
 
     @Override
     public void deleteById(Long id) {
-
+        gigRepository.deleteById(id);
     }
 }

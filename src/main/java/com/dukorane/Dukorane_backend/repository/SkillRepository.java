@@ -8,4 +8,5 @@ import java.util.UUID;
 
 @Repository
 public interface SkillRepository extends JpaRepository <Skill, Long> {
+    Skill findSkillById(Long skillId);
 }
