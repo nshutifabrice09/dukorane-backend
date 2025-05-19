@@ -6,6 +6,8 @@ import com.dukorane.Dukorane_backend.service.CertificationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @CrossOrigin("http://localhost:3000")
 public class CertificationController {
@@ -20,5 +22,15 @@ public class CertificationController {
     @PostMapping("/certification/{tvetId}")
     public Certification save(@RequestBody Certification certification, @PathVariable ("tvetId") Long tvetId){
         return certificationService.saveCertification(certification, tvetId);
+    }
+
+    @GetMapping("/certifications")
+    public List<Certification> certificationList(){
+        return certificationService.getAllCertifications();
+    }
+
+    @GetMapping("/certification/{id}")
+    public Certification getCertification(@PathVariable ("id") Long id){
+        return certificationService.getCertificationById(id);
     }
 }
