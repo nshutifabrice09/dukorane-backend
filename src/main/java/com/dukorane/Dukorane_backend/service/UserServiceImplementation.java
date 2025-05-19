@@ -42,7 +42,7 @@ public class UserServiceImplementation implements UserService{
             existUser.setRole(user.getRole());
             existUser.setLocation(user.getLocation());
             existUser.setCreatedAt(user.getCreatedAt());
-            return userRepository.save(user);
+            return userRepository.save(existUser);
         }
 
         return null;
