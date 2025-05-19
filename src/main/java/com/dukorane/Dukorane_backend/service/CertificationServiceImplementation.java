@@ -40,6 +40,13 @@ public class CertificationServiceImplementation implements CertificationService{
 
     @Override
     public Certification updateCertification(Long id, Certification certification) {
+        Certification existCertification = certificationRepository.findCertificationById(id);
+        if(existCertification != null){
+            existCertification.setTitle(certification.getTitle());
+            existCertification.setIssueDate(certification.getIssueDate());
+            existCertification.setFileUrl(certification.getFileUrl());
+            return certificationRepository.save(existCertification);
+        }
         return null;
     }
 
