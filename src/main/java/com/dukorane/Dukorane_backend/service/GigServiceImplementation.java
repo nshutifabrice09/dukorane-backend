@@ -45,6 +45,14 @@ public class GigServiceImplementation implements GigService{
 
     @Override
     public Gig updateGig(Long id, Gig gig) {
+        Gig existGig = gigRepository.findGigById(id);
+        if(existGig != null){
+            existGig.setTitle(gig.getTitle());
+            existGig.setDescription(gig.getDescription());
+            existGig.setLocation(gig.getLocation());
+            existGig.setDeadline(gig.getDeadline());
+            return gigRepository.save(existGig);
+        }
         return null;
     }
 
