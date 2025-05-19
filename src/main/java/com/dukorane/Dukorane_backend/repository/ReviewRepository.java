@@ -8,4 +8,5 @@ import java.util.UUID;
 
 @Repository
 public interface ReviewRepository extends JpaRepository <Review, Long> {
+    Review findReviewById(Long id);
 }

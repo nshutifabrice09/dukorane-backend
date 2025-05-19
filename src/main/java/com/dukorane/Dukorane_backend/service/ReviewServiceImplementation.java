@@ -24,12 +24,12 @@ public class ReviewServiceImplementation implements ReviewService{
 
     @Override
     public List<Review> getAllReviews() {
-        return null;
+        return reviewRepository.findAll();
     }
 
     @Override
     public Review getReviewById(Long id) {
-        return null;
+        return reviewRepository.findReviewById(id);
     }
 
     @Override
