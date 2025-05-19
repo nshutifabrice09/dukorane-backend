@@ -26,6 +26,13 @@ public class ApplicationController {
         return applicationService.saveApplication(application, gigId, workerId);
     }
 
+    @GetMapping("/applications")
+    public List<Application> applicationList(){
+        return applicationService.getAllApplications();
+    }
 
-
+    @GetMapping("/application/{id}")
+    public Application getApplication(@PathVariable ("id") Long id){
+        return applicationService.getApplicationById(id);
+    }
 }
