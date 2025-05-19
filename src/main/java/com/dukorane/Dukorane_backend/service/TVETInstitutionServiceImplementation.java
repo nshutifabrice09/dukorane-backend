@@ -40,11 +40,18 @@ public class TVETInstitutionServiceImplementation implements TVETInstitutionServ
 
     @Override
     public TVETInstitution updateTVETInstitution(Long id, TVETInstitution tvetInstitution) {
+        TVETInstitution existTvetInstitution = tvetInstitutionRepository.findTvetInstitutionById(id);
+        if(existTvetInstitution != null){
+            existTvetInstitution.setName(tvetInstitution.getName());
+            existTvetInstitution.setLocation(tvetInstitution.getLocation());
+            return tvetInstitutionRepository.save(existTvetInstitution);
+
+        }
         return null;
     }
 
     @Override
     public void deleteById(Long id) {
-
+        tvetInstitutionRepository.deleteById(id);
     }
 }
