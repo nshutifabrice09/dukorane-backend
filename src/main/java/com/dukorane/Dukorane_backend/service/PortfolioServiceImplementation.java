@@ -51,6 +51,6 @@ public class PortfolioServiceImplementation implements PortfolioService{
 
     @Override
     public void deleteById(Long id) {
-
+        portfolioRepository.deleteById(id);
     }
 }
