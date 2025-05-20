@@ -1,5 +1,6 @@
 package com.dukorane.Dukorane_backend.service;
 
+import com.dukorane.Dukorane_backend.model.User;
 import com.dukorane.Dukorane_backend.model.WorkerProfile;
 import com.dukorane.Dukorane_backend.repository.UserRepository;
 import com.dukorane.Dukorane_backend.repository.WorkerProfileRepository;
@@ -30,12 +31,15 @@ public class WorkerProfileServiceImplementation implements WorkerProfileService 
     }
 
     @Override
-    public WorkerProfile saveWorkerProfile(WorkerProfile WorkerProfile, Long userId) {
-        return null;
+    public WorkerProfile saveWorkerProfile(WorkerProfile workerProfile, Long userId) {
+        User user = userRepository.findUserById(userId);
+        workerProfile.setUser(user);
+        return workerProfileRepository.save(workerProfile);
     }
 
     @Override
-    public WorkerProfile updateWorkerProfile(Long id, WorkerProfile WorkerProfile) {
+    public WorkerProfile updateWorkerProfile(Long id, WorkerProfile workerProfile) {
+        
         return null;
     }
 
