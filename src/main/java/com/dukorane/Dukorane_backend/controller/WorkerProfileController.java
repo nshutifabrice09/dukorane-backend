@@ -38,4 +38,9 @@ public class WorkerProfileController {
         return workerProfileService.updateWorkerProfile(id, workerProfile);
     }
 
+    @DeleteMapping("/delete/workerProfile/{id}")
+    public void remove(@PathVariable ("id") Long id){
+        workerProfileService.deleteById(id);
+    }
+
 }
