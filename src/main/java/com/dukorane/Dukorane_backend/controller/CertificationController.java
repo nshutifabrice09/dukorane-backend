@@ -33,4 +33,13 @@ public class CertificationController {
     public Certification getCertification(@PathVariable ("id") Long id){
         return certificationService.getCertificationById(id);
     }
+    @PutMapping("/update/certification/{id}")
+    public Certification updateCertification(@RequestBody Certification certification, @PathVariable("id") Long id){
+        return certificationService.updateCertification(id, certification);
+    }
+
+    @DeleteMapping("/delete/certification/{id}")
+    public void deleteCertification(@PathVariable ("id") Long id){
+        certificationService.deleteById(id);
+    }
 }
