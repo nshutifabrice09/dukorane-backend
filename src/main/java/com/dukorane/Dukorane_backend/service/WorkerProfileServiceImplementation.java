@@ -39,7 +39,14 @@ public class WorkerProfileServiceImplementation implements WorkerProfileService 
 
     @Override
     public WorkerProfile updateWorkerProfile(Long id, WorkerProfile workerProfile) {
-        
+        WorkerProfile existWorkerProfile = workerProfileRepository.findWorkerById(id);
+        if(existWorkerProfile != null){
+            existWorkerProfile.setYearsOfExperience(workerProfile.getYearsOfExperience());
+            existWorkerProfile.setLanguageSpoken(workerProfile.getLanguageSpoken());
+            existWorkerProfile.setServiceAreas(workerProfile.getServiceAreas());
+            existWorkerProfile.setReputationScore(workerProfile.getReputationScore());
+            return workerProfileRepository.save(existWorkerProfile);
+        }
         return null;
     }
 
