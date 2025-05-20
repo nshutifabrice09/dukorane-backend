@@ -1,12 +1,15 @@
 package com.dukorane.Dukorane_backend.service;
 
 import com.dukorane.Dukorane_backend.model.WorkerProfile;
+
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class WorkerSkillServiceImplementation implements WorkerProfileService{
+
+
     @Override
     public List<WorkerProfile> getAllWorkerProfiles() {
         return null;
