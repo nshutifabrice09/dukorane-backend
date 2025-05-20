@@ -2,31 +2,32 @@ package com.dukorane.Dukorane_backend.service;
 
 import com.dukorane.Dukorane_backend.model.WorkerProfile;
 
+import com.dukorane.Dukorane_backend.model.WorkerSkill;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class WorkerSkillServiceImplementation implements WorkerProfileService{
+public class WorkerSkillServiceImplementation implements WorkerSkillService{
 
 
     @Override
-    public List<WorkerProfile> getAllWorkerProfiles() {
+    public List<WorkerSkill> getAllWorkerSkills() {
         return null;
     }
 
     @Override
-    public WorkerProfile getWorkerProfileById(Long id) {
+    public WorkerSkill getWorkerSkillById(Long id) {
         return null;
     }
 
     @Override
-    public WorkerProfile saveWorkerProfile(WorkerProfile workerProfile, Long userId) {
+    public WorkerSkill saveWorkerSkill(WorkerSkill WorkerSkill) {
         return null;
     }
 
     @Override
-    public WorkerProfile updateWorkerProfile(Long id, WorkerProfile workerProfile) {
+    public WorkerSkill updateWorkerSkill(Long id, WorkerSkill WorkerSkill) {
         return null;
     }
 
