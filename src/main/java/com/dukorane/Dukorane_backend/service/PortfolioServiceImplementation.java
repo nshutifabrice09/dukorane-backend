@@ -40,6 +40,12 @@ public class PortfolioServiceImplementation implements PortfolioService{
 
     @Override
     public Portfolio updatePortfolio(Long id, Portfolio portfolio) {
+        Portfolio existPortfolio = portfolioRepository.findPortolioById(id);
+        if(existPortfolio != null){
+            existPortfolio.setMediaUrl(portfolio.getMediaUrl());
+            existPortfolio.setCaption((portfolio.getCaption()));
+            return portfolioRepository.save(existPortfolio);
+        }
         return null;
     }
 
