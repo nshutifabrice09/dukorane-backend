@@ -33,4 +33,9 @@ public class WorkerProfileController {
         return workerProfileService.getWorkerProfileById(id);
     }
 
+    @PutMapping("/update/workerProfile/{id}")
+    public WorkerProfile updateWorkerProfile(@RequestBody WorkerProfile workerProfile, @PathVariable ("id") Long id){
+        return workerProfileService.updateWorkerProfile(id, workerProfile);
+    }
+
 }
