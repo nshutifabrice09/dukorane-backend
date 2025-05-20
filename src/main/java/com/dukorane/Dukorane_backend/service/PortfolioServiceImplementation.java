@@ -1,6 +1,7 @@
 package com.dukorane.Dukorane_backend.service;
 
 import com.dukorane.Dukorane_backend.model.Portfolio;
+import com.dukorane.Dukorane_backend.model.WorkerProfile;
 import com.dukorane.Dukorane_backend.repository.PortfolioRepository;
 import com.dukorane.Dukorane_backend.repository.WorkerProfileRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +33,9 @@ public class PortfolioServiceImplementation implements PortfolioService{
 
     @Override
     public Portfolio savePortfolio(Portfolio portfolio, Long workerId) {
-        return null;
+        WorkerProfile workerProfile = workerProfileRepository.findWorkerById(workerId);
+        portfolio.setWorker(workerProfile);
+        return portfolioRepository.save(portfolio);
     }
 
     @Override
