@@ -1,5 +1,5 @@
 package com.dukorane.Dukorane_backend.controller;
-
+import com.dukorane.Dukorane_backend.exception.GigNotFoundException;
 import com.dukorane.Dukorane_backend.model.Gig;
 import com.dukorane.Dukorane_backend.service.GigService;
 import org.springframework.beans.factory.annotation.Autowired;
