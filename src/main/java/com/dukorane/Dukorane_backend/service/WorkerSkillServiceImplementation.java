@@ -1,6 +1,5 @@
 package com.dukorane.Dukorane_backend.service;
 
-import com.dukorane.Dukorane_backend.model.WorkerProfile;
 
 import com.dukorane.Dukorane_backend.model.WorkerSkill;
 import org.springframework.stereotype.Service;
