@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @CrossOrigin("http://localhost:3000")
 public class GigController {
@@ -18,7 +20,24 @@ public class GigController {
     }
 
     @PostMapping("/gig/{userId}/{skillId}")
-    public Gig saveGig(@RequestBody Gig gig, @PathVariable ("id") Long userId, @PathVariable ("id") Long skillId){
+    public Gig saveGig(@RequestBody Gig gig, @PathVariable ("userId") Long userId, @PathVariable ("skillId") Long skillId){
         return gigService.saveGig(gig, userId, skillId);
+    }
+    @GetMapping("/gigs")
+    public List<Gig> gigList(){
+        return gigService.getAllGigs();
+    }
+    @GetMapping("/gig/{id}")
+    public Gig getGig(@PathVariable ("id") Long id){
+        return gigService.getGigById(id);
+    }
+    @PutMapping("/update/gig/{id}")
+    public Gig updateGig(@RequestBody Gig gig, @PathVariable ("id") Long id){
+        return gigService.updateGig(id, gig);
+    }
+
+    @DeleteMapping("/delete/gig/{id}")
+    public void removeGig(@PathVariable ("id") Long id){
+        gigService.deleteById(id);
     }
 }
