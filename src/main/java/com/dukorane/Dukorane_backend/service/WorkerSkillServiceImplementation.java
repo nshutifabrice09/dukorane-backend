@@ -21,12 +21,12 @@ public class WorkerSkillServiceImplementation implements WorkerProfileService{
     }
 
     @Override
-    public WorkerProfile saveWorkerProfile(WorkerProfile WorkerProfile, Long userId) {
+    public WorkerProfile saveWorkerProfile(WorkerProfile workerProfile, Long userId) {
         return null;
     }
 
     @Override
-    public WorkerProfile updateWorkerProfile(Long id, WorkerProfile WorkerProfile) {
+    public WorkerProfile updateWorkerProfile(Long id, WorkerProfile workerProfile) {
         return null;
     }
 
