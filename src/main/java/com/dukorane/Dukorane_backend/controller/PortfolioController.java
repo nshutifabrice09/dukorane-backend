@@ -27,4 +27,14 @@ public class PortfolioController {
     public List<Portfolio> portfolioList(){
         return portfolioService.getAllPortfolios();
     }
+
+    @GetMapping("/portfolio/{id}")
+    public Portfolio getPortfolio(@PathVariable ("id") Long id){
+        return portfolioService.getPortfolioById(id);
+    }
+
+    @PutMapping("/update/portfolio/{id}")
+    public Portfolio updatePortfolio(@PathVariable("id") Long id, @RequestBody Portfolio portfolio){
+        return portfolioService.updatePortfolio(id, portfolio);
+    }
 }
