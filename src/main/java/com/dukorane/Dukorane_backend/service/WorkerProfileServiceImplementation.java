@@ -21,12 +21,12 @@ public class WorkerProfileServiceImplementation implements WorkerProfileService 
 
     @Override
     public List<WorkerProfile> getAllWorkerProfiles() {
-        return null;
+        return workerProfileRepository.findAll();
     }
 
     @Override
     public WorkerProfile getWorkerProfileById(Long id) {
-        return null;
+        return workerProfileRepository.findWorkerById(id);
     }
 
     @Override
@@ -41,6 +41,6 @@ public class WorkerProfileServiceImplementation implements WorkerProfileService 
 
     @Override
     public void deleteById(Long id) {
-
+        workerProfileRepository.deleteById(id);
     }
 }
