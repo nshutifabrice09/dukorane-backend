@@ -28,4 +28,9 @@ public class WorkerProfileController {
         return workerProfileService.getAllWorkerProfiles();
     }
 
+    @GetMapping("/workerProfile/{id}")
+    public WorkerProfile getWorkerProfile(@PathVariable ("id") Long id){
+        return workerProfileService.getWorkerProfileById(id);
+    }
+
 }
