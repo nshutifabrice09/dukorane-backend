@@ -37,4 +37,9 @@ public class PortfolioController {
     public Portfolio updatePortfolio(@PathVariable("id") Long id, @RequestBody Portfolio portfolio){
         return portfolioService.updatePortfolio(id, portfolio);
     }
+
+    @DeleteMapping("/delete/portfolio/{id}")
+    public void removePortfolio(@PathVariable("id") Long id){
+        portfolioService.deleteById(id);
+    }
 }
