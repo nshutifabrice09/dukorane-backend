@@ -1,7 +1,5 @@
 package com.dukorane.Dukorane_backend.exception;
 
-import java.util.UUID;
-
 public class SkillNotFoundException extends RuntimeException{
 
     public SkillNotFoundException (Long id){

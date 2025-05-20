@@ -1,7 +1,5 @@
 package com.dukorane.Dukorane_backend.exception;
 
-import java.util.UUID;
-
 public class UserNotFoundException extends RuntimeException{
 
     public UserNotFoundException (Long id){
